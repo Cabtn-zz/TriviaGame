@@ -4,6 +4,8 @@ var correctAnswers = 0;
 var wrongAnswers = 0;
 var count = 0;
 var currentQuestion = 0;
+var number = 30;
+var intervalId;
 
 var triviaGame = [
 {
@@ -36,11 +38,31 @@ var triviaGame = [
 $("#start").on("click", function startGame(){
 	console.log("button works");
 	$("button").fadeOut();
-	currentQuestion	= setInterval(nextQuestion, 5000);
+	// currentQuestion	= setInterval(nextQuestion, 5000);
+	run();
+	nextQuestion();
+	
 });
+
+function run() {
+      intervalId = setInterval(decrement, 1000);
+    }
+
+function decrement() {
+	if (number > 0){
+		number--;
+ 		$("#show-number").html("<h2>" + number + "</h2>");
+ 	}
+ 	else{
+ 		number = 30;
+ 	}
+}
+
 
 function nextQuestion () {
 	if (count < triviaGame.length) {
+		
+		currentQuestion	= setInterval(nextQuestion, 30000);
 		$("#questions").html(triviaGame[count].q1);
 		$("#answers").html(" " + triviaGame[count].answers + " ");
 		console.log(triviaGame[count].rightAnswer);

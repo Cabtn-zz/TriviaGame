@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<title>Trivia Game</title>
 </head>
 <body>
-	<div id="buttons">
-        <button id="start">Start</button>
-    </div>
+	<div class="container">
+		<div class="text-center jumbotron">
+			<h2 class="text-center">Welcome to the game!</h2>
+			<div class="text-center"> Click start and answer the questions! You will be given 30 seconds to answer each question. Good luck!</div>	
+		</div>
+		
+		<div id="buttons" class="text-center">
+	       	 <button id="start" class="text-center">Start</button>
+	    </div>
 
-    <div id="questions">Test</div>
-	<div id="answers"></div>
+	    <div id="time" class="text-center"></div>
+		<div id="show-number" class="text-center"></div>
+	   	<div id="questions" class="text-center">Test</div>
+		<div id="answers" class="text-center"></div>
+	</div>
 </body>
 
 
